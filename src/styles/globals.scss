@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+input, textarea, select, button{
+  outline: none;
+}
+
+html, body{
+  background-color: var(--bg500);
+}
+
+:root{
+  --primary: #ca2e2e;
+  --primary-hover: #691515;
+
+  --primary-text: #d1cece;
+  --primary-text-hover: #f9f9f9;
+
+  --link-color: #e9e9e9;
+
+  --bg300: #222;
+  --bg500: #191919;
+  --bg600: #0c0c0c;
+
+  --border500: rgb(56, 56, 56);
+
+  --input-text: #b4b3b3;
+
+  --box-shadow-color: #161616;
+}

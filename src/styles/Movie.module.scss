@@ -1,0 +1,378 @@
+.header_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.poster{
+    width: 250px;
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
+    height: 500px;
+}
+
+.poster button{
+    font-weight: bold;
+    z-index: 5;
+    position: absolute;
+    top: 15px;
+    left: 3%;
+    width: 19%;
+    padding: 8px 12px;;
+    background-color: transparent;
+    color: var(--primary-text);
+    font-size: 1em;
+    border-radius: 5px;
+    border: solid 2px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, var(--primary), var(--primary-hover));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--bg300) inset;
+    transition: all 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.poster button:hover{
+    border: solid 2px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, var(--primary), var(--primary-hover));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, var(--primary), var(--primary-hover)) inset;
+}
+
+.poster img{
+    position: absolute;
+    top: 10%;
+    width: 19%;
+    left: 3%;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.background_fade{
+    top: 0;
+    left: 0px;
+    position: absolute;
+    display: block;
+    width: 350px;
+    height: 100%;
+    background: linear-gradient(to right, #222222 50%, rgba(34, 34, 34, 0) 60%);
+    z-index: 1;
+}
+
+.background_container{
+    max-width: 1600px;
+    opacity: 0.05;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.background_image{
+    width: 100%;
+}
+
+.content{
+    position: absolute;
+    margin-left: 25%;
+    top: 10%;
+}
+
+.overview{
+    margin-top: 30px
+}
+
+.genre_list span{
+    color: var(--primary-text);
+
+    & + span:before{
+        content: ', '
+    }
+}
+
+.overview h2{
+    line-height: 50px;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content p{
+    color: var(--primary-text);
+}
+
+//////////////////////
+// Cast /////////////
+////////////////////
+
+.cast_section{
+    padding-top: 20px;
+    text-align: center;
+    background-color: var(--bg600);
+    color: var(--primary);
+    font-size: 1.5em;
+
+    h1{
+        margin-bottom: 20px;
+    }
+}
+
+.cast_container{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    background-color: var(--bg600);
+}
+
+.cast_card{
+    width: 250px;
+    margin: 0px 20px 10px 10px;
+    background-color: var(--bg500);
+    border-radius: 7px;
+    color: var(--input-text);
+    box-shadow: 0px 0px 20px 0px var(--box-shadow-color);
+
+    & + div{
+        margin-left: -5px;
+    }
+}
+
+.cast_card img{
+    width: 200px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.cast_card h2,
+.cast_card p
+{
+    margin-left: 5px;
+}
+
+////////////////////////////////////////////////////////////////
+////////////////// SIMILAR MOVIES /////////////////////////////
+///////////////////////////////////////////////////////////////
+
+.similar_movies_section{
+    padding-top: 20px;
+    text-align: center;
+    background-color: var(--bg600);
+    color: var(--primary);
+    font-size: 1.5em;
+
+    h1{
+        margin-bottom: 20px;
+    }
+}
+
+.similar_movies_container{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    background-color: var(--bg600);
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.similar_movies_card{
+    width: 250px;
+    margin: 0px 20px 10px 10px;
+    background-color: var(--bg500);
+    border-radius: 7px;
+    color: var(--input-text);
+    box-shadow: 0px 0px 20px 0px var(--box-shadow-color);
+
+    & + div{
+        margin-left: -5px;
+    }
+}
+
+.similar_movies_card img{
+    width: 250px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.similar_movies_card h2,
+.similar_movies_card p
+{
+    margin-left: 5px;
+}
+
+
+@media (min-width: 2160px) {
+    .poster{
+        height: 670px;
+    }
+
+    .background_fade_end{
+        top: 0;
+        right: 0px;
+        position: absolute;
+        display: block;
+        width: 800px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(34, 34, 34, 0) 0%, #222222 10%);
+        z-index: 1;
+    }
+}
+@media (max-width: 2159px) {
+    .poster{
+        height: 670px;
+    }
+
+    .background_fade_end{
+        top: 0;
+        right: 0px;
+        position: absolute;
+        display: block;
+        width: 500px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(34, 34, 34, 0) 0%, #222222 10%);
+        z-index: 1;
+    }
+}
+
+@media (min-width: 2040px){
+    .poster img{
+        position: absolute;
+        top: 10%;
+        width: 15%;
+        left: 3%;
+        border-radius: 5px;
+        z-index: 2;
+    }
+
+    .poster button{
+        top: 15px;
+        left: 3%;
+        width: 15%;
+        padding: 16px 12px;;
+    }
+}
+
+@media (max-width: 1840px) {
+    .poster{
+        height: 670px;
+    }
+
+    .background_fade_end{
+        top: 0;
+        right: 0px;
+        position: absolute;
+        display: block;
+        width: 350px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(34, 34, 34, 0) 20%, #222222 60%);
+        z-index: 1;
+    }
+}
+@media (max-width: 1600px) {
+    .poster{
+        height: 590px;
+    }
+}
+@media (max-width: 1280px) {
+    .poster{
+        height: 470px;
+    }
+}
+
+@media (max-width: 1366px){
+    .poster{
+        width: 250px;
+        height: 500px;
+    }
+
+    .poster button{
+        position: absolute;
+        top: 15px;
+        left: 3%;
+        width: 19%;
+        padding: 8px 12px;;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+
+
+    .poster img{
+        position: absolute;
+        top: 10%;
+        width: 19%;
+        left: 3%;
+        z-index: 2;
+    }
+
+    .background_fade{
+        top: 0;
+        left: 0px;
+        position: absolute;
+        display: block;
+        width: 350px;
+        height: 100%;
+        background: linear-gradient(to right, #222222 50%, rgba(34, 34, 34, 0) 60%);
+        z-index: 1;
+    }
+
+    .background_container{
+        max-width: 1600px;
+        opacity: 0.05;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .background_image{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .poster{
+        height: 390px;
+    }
+}
+@media (max-width: 970px) {
+    .overview{
+        margin-top: 10px
+    }
+}
+
+@media (max-width: 800px){
+    .header_container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .poster{
+        width: 100%;
+        height: auto;
+    }
+    .poster button{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 10px 0px;
+        width: 100%;
+        height: 60px;
+    }
+    .poster img{
+        position: relative;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+        border-radius: 5px;
+        z-index: 2;
+    }
+
+    .content{
+        position: relative;
+        margin-left: 0px;
+        top: 0px;
+    }
+    .background_container{
+        display: none;
+    }
+}
